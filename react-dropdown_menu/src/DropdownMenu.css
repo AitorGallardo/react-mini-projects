@@ -1,0 +1,19 @@
+
+.main {
+  position: absolute;
+  margin: auto 10px;
+  border-radius: 14px;
+  right: 0;
+  padding: 20px;
+  background-color: #251749;
+}
+/* .main:hover {
+  position: absolute;
+  margin: auto 10px;
+  max-height: 500px;
+  border-radius: 14px;
+  right: 0;
+  padding: 20px;
+  background-color: #492317;
+  transition: max-height 1  s ease-in;
+} */

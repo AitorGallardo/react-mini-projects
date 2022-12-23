@@ -1,0 +1,53 @@
+div.keyboard {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(10, minmax(auto, 1fr));
+}
+
+div.keyboard__character {
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10%;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+div.keyboard__character-clicked {
+  border: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10%;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+div.keyboard__character:hover {
+  transform: scale(1.1);
+}
+
+div.word__container {
+  display: flex;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+div.word__character {
+  position:relative;
+  font-size: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div.word__character>.bottomLine {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #19dfcc;
+}
+
+div.word__character>.content {
+}
