@@ -5,7 +5,7 @@ import './DropdownMenu.css'
 const DropdownSettings = ({ onClickItem }) => {
   return (
     <div className='slide-in-left'>
-      <DropdownItem title='Back' onClickItem={onClickItem}/>
+      <DropdownItem title='Back' onClickItem={onClickItem} hasMoreInfo={true} backDirection/>
       <DropdownItem title='Setting n.1' />
       <DropdownItem title='Setting n.2' />
       <DropdownItem title='Setting n.3' />

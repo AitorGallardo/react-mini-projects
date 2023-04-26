@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-const Arrow = () => {
+const Arrow = ({backDirection=false}) => {
   return (
-    <div style={{marginLeft: 'auto'}}>
+    <div style={{transform: backDirection ? 'scaleX(-1)' : 'scaleX(1)',marginLeft: backDirection ? '': 'auto'}}>
       <div
         style={{ backgroundColor: 'white', width: '10px', height: '2px',transformOrigin: 'right',transform: 'translateY(1px) rotate(30deg)' }}
       ></div>
@@ -12,7 +12,7 @@ const Arrow = () => {
     </div>
   );
 };
-export const DropdownItem = ({ title, onClickItem, hasMoreInfo = false }) => {
+export const DropdownItem = ({ title, onClickItem, hasMoreInfo = false,backDirection=false }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnter = () => {
@@ -47,6 +47,7 @@ export const DropdownItem = ({ title, onClickItem, hasMoreInfo = false }) => {
           cursor: 'pointer',
         }}
       ></div>
+      {(hasMoreInfo&&backDirection) && <Arrow backDirection/>}
       <p
         style={{
           margin: '0',
@@ -58,7 +59,7 @@ export const DropdownItem = ({ title, onClickItem, hasMoreInfo = false }) => {
       >
         {title}
       </p>
-      {hasMoreInfo && <Arrow />}
+      {(hasMoreInfo&&!backDirection)  && <Arrow />}
 
     </div>
   );
