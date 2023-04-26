@@ -4,7 +4,7 @@ import './DropdownMenu.css'
 
 const DropdownSettings = ({ onClickItem }) => {
   return (
-    <div className='main'>
+    <div className='slide-in-left'>
       <DropdownItem title='Back' onClickItem={onClickItem}/>
       <DropdownItem title='Setting n.1' />
       <DropdownItem title='Setting n.2' />
@@ -15,7 +15,7 @@ const DropdownSettings = ({ onClickItem }) => {
 
 const DropDownDefault = ({ onClickItem }) => {
   return (
-    <div className='main'>
+    <div className='slide-in-right'>
       <DropdownItem title='My profile'  />
       <DropdownItem title='Settings' hasMoreInfo={true} onClickItem={onClickItem} />
       <DropdownItem title='Animals' />
@@ -54,7 +54,7 @@ export const DropdownMenu = ({}) => {
     }
   };
   return (
-    <div className='container'>
+    <div className='main'>
       {menuStates.def && <DropDownDefault  onClickItem={handleClickItem} />}
       {menuStates.settings && <DropdownSettings onClickItem={handleClickItem} />}
       {menuStates.animals && <DropDownDefault />}
